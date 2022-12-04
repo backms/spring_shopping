@@ -17,9 +17,9 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello";
+    @GetMapping("/register")
+    public String register(){
+        return "member/register";
     }
 
     @GetMapping("/memberAll")
