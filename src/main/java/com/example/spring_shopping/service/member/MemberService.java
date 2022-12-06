@@ -10,4 +10,5 @@ public interface MemberService {
 
     String getTime();
 
+    void insertMember(MemberVo memberVo) throws Exception;
 }

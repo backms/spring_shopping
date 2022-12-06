@@ -24,4 +24,9 @@ public class MemberServiceImpl implements MemberService {
         return memberDao.selectDbTest();
     }
 
+    @Override
+    public void insertMember(MemberVo memberVo) throws Exception {
+        memberDao.insertMember(memberVo);
+    }
+
 }

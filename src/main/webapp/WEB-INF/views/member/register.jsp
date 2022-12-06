@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,41 +34,42 @@
         <div class="row px-xl-5">
             <div class="col-lg-8">
                 <div class="mb-4">
-                    <h4 class="font-weight-semi-bold mb-4">Billing Address</h4>
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label>ID</label>
-                            <input class="form-control" type="text" id="id" placeholder="your Id">
+                    <form:form commandName="memberVo" id="registerForm" action="${context}/member/doRegister">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>ID</label>
+                                <input class="form-control" type="text" id="id" placeholder="your Id">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Your Name</label>
+                                <input class="form-control" type="text" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>PassWord</label>
+                                <input class="form-control" type="password" id="password" placeholder="Your PassWord">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Confirm PassWord</label>
+                                <input class="form-control" type="password" placeholder="confirm PassWord">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>E-mail</label>
+                                <input class="form-control" type="text" id="email" placeholder="example@email.com">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Mobile No</label>
+                                <input class="form-control" type="text" id="phoneNo" placeholder="exception of -">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Address Line 1</label>
+                                <input class="form-control" type="text" id="addr1" placeholder="123 Street">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Address Line 2</label>
+                                <input class="form-control" type="text" id="addr2" placeholder="123 Street">
+                            </div>
                         </div>
-                        <div class="col-md-6 form-group">
-                            <label>Your Name</label>
-                            <input class="form-control" type="text" id="name" placeholder="Your Name">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>PassWord</label>
-                            <input class="form-control" type="password" id="password" placeholder="Your PassWord">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Confirm PassWord</label>
-                            <input class="form-control" type="password" placeholder="confirm PassWord">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>E-mail</label>
-                            <input class="form-control" type="text" id="email" placeholder="example@email.com">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Mobile No</label>
-                            <input class="form-control" type="text" id="phoneNo" placeholder="exception of -">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 1</label>
-                            <input class="form-control" type="text" id="addr1" placeholder="123 Street">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 2</label>
-                            <input class="form-control" type="text" id="addr2" placeholder="123 Street">
-                        </div>
-                    </div>
+                    </form:form>
                 </div>
                 <div class="card-footer border-secondary bg-transparent">
                     <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>

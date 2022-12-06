@@ -12,4 +12,5 @@ public interface MemberDao {
 
     String selectDbTest();
 
+    void insertMember(MemberVo memberVo);
 }
