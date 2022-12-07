@@ -14,17 +14,6 @@ public class MemberServiceImpl implements MemberService {
     private MemberDao memberDao;
 
     @Override
-    public List<MemberVo> selectMemberAllList() {
-
-        return memberDao.selectMemberAllList();
-    }
-
-    @Override
-    public String getTime() {
-        return memberDao.selectDbTest();
-    }
-
-    @Override
     public void insertMember(MemberVo memberVo) throws Exception {
         memberDao.insertMember(memberVo);
     }

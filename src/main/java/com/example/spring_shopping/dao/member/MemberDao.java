@@ -8,9 +8,6 @@ import java.util.List;
 @Mapper
 public interface MemberDao {
 
-    List<MemberVo> selectMemberAllList();
-
-    String selectDbTest();
-
     void insertMember(MemberVo memberVo);
+
 }

@@ -6,9 +6,6 @@ import java.util.List;
 
 public interface MemberService {
 
-    List<MemberVo> selectMemberAllList();
-
-    String getTime();
-
     void insertMember(MemberVo memberVo) throws Exception;
+
 }

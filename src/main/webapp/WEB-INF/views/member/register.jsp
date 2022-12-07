@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+
+    $('$registBtn').click(function(){
+        $('#registerForm').submit();
+    });
+
+
+</script>
+
 <head>
     <meta charset="utf-8">
     <title>EShopper - Bootstrap Shop Template</title>
@@ -33,8 +42,8 @@
     <div class="container-fluid pt-5">
         <div class="row px-xl-5">
             <div class="col-lg-8">
-                <div class="mb-4">
-                    <form:form commandName="memberVo" id="registerForm" action="${context}/member/doRegister">
+                <form:form commandName="memberVo" id="registerForm" action="${context}/member/doRegister">
+                    <div class="mb-4">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label>ID</label>
@@ -69,11 +78,11 @@
                                 <input class="form-control" type="text" id="addr2" placeholder="123 Street">
                             </div>
                         </div>
-                    </form:form>
-                </div>
-                <div class="card-footer border-secondary bg-transparent">
-                    <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>
-                </div>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3" id="registBtn">Place Order</button>
+                    </div>
+                </form:form>
             </div>
         </div>
     </div>

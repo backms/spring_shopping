@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -24,29 +25,8 @@ public class MemberController {
         return "member/register";
     }
 
-    @GetMapping("/memberAll")
-    public String memberAll(Model model) {
-
-        List<MemberVo> memberList = memberService.selectMemberAllList();
-
-        model.addAttribute("memberList", memberList);
-
-        return "member/memberList";
-    }
-
-    @GetMapping("/dbTest")
-    public String dbTest(Model model) {
-
-        String time = memberService.getTime();
-
-        model.addAttribute("time", time);
-
-        return "member/dbTest";
-
-    }
-
     @PostMapping("/doRegister")
-    public String doRegister(MemberVo memberVo, ModelMap model) throws Exception {
+    public String doRegister(@ModelAttribute("memberVo") MemberVo memberVo, ModelMap model) throws Exception {
 
         memberService.insertMember(memberVo);
 

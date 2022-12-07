@@ -4,29 +4,9 @@
 
 <mapper namespace="com.example.spring_shopping.dao.member.MemberDao">
 
-    <resultMap id="memberMap" type="com.example.spring_shopping.vo.member.MemberVo">
-        <id column="member_no" property="memberNd" />
-        <result column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="password" property="password" />
-        <result column="email" property="email" />
-        <result column="phone_no" property="phoneNo" />
-        <result column="addr1" property="addr1" />
-        <result column="addr2" property="addr2" />
-    </resultMap>
-
-    <select id="selectMemberAllList" resultMap="memberMap">
-        SELECT *
-        FROM MEMBER
-    </select>
-
-    <select id="selectDbTest" resultType="String">
-        SELECT SYSDATE FROM DUAL
-    </select>
-
-    <select id="insertMember" parameterMap="memberMap" resultType="memberMap">
+    <insert id="insertMember" parameterType="com.example.spring_shopping.vo.member.MemberVo">
         INSERT INTO MEMBER(MEMBER_NO, ID, NAME, PASSWORD, EMAIL, PHONE_NO, ADDR1, ADDR2)
         VALUES( (SELECT MEMBER_SEQ.NEXTVLA FROM DUAL), #{id}, #{name}, #{password}, #{email}, #{phoneNo}, #{addr1}, #{addr2})
-    </select>
+    </insert>
 
 </mapper>
