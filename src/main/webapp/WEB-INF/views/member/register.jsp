@@ -47,15 +47,15 @@
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label>ID</label>
-                                <input class="form-control" type="text" id="id" placeholder="your Id">
+                                <input class="form-control" type="text" id="id" name="id" placeholder="your Id">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Your Name</label>
-                                <input class="form-control" type="text" id="name" placeholder="Your Name">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Your Name">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>PassWord</label>
-                                <input class="form-control" type="password" id="password" placeholder="Your PassWord">
+                                <input class="form-control" type="password" id="password" name="password" placeholder="Your PassWord">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Confirm PassWord</label>
@@ -63,19 +63,19 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>E-mail</label>
-                                <input class="form-control" type="text" id="email" placeholder="example@email.com">
+                                <input class="form-control" type="text" id="email" name="email" placeholder="example@email.com">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mobile No</label>
-                                <input class="form-control" type="text" id="phoneNo" placeholder="exception of -">
+                                <input class="form-control" type="text" id="phoneNo" name="phoneNo" placeholder="exception of -">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Address Line 1</label>
-                                <input class="form-control" type="text" id="addr1" placeholder="123 Street">
+                                <input class="form-control" type="text" id="addr1" name="addr1" placeholder="123 Street">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Address Line 2</label>
-                                <input class="form-control" type="text" id="addr2" placeholder="123 Street">
+                                <input class="form-control" type="text" id="addr2" name="addr2" placeholder="123 Street">
                             </div>
                         </div>
                     </div>
