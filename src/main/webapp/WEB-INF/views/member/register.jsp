@@ -1,14 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <script>
+$(document).ready(function(){
 
-    $('$registBtn').click(function(){
-        $('#registerForm').submit();
+    $('#registBtn').click(function(){
+
+        if($('#id').val() == null || $('#id').val() == ''){
+            alert("ID를 입력해주세요.");
+            return false;
+        }
+
+        if($('#password').val() == null || $('#password').val() == ''){
+            alert('패스워드를 입력해주세요.');
+            return false;
+        }
+
+        if($('#password').val() != $('#pwConfirm').val()){
+            alert('패스워드가 일치하지 않습니다.');
+            return false;
+        }
+
+        if($('#name').val() == null || $('#name').val() == ''){
+            alert('이름을 입력해주세요');
+            return false;
+        }
+
+        if($('#email').val() == null || $('#email').val() == ''){
+            alert('이메일을 입력해주세요');
+            return false;
+        }
+
+        if($('#mobileNo').val() == null || $('#mobilNo').val() == ''){
+            alert('핸드폰번호를 입력해주세요');
+            return false;
+        }
+
+        if($('#addr1').val() == null || $('#addr1').val() == ''){
+            alert('주소1를 입력해주세요');
+        }
+
+        if($('#addr2').val() == null || $('#addr2').val() == ''){
+            alert('주소2를 입력해주세요');
+        }
+
+        // $('#registerForm').submit();
+        // $('#registerForm').attr("action", "/member/doRegister").submit();
     });
 
-
+});
 </script>
 
 <head>
@@ -42,7 +86,7 @@
     <div class="container-fluid pt-5">
         <div class="row px-xl-5">
             <div class="col-lg-8">
-                <form:form commandName="memberVo" id="registerForm" action="${context}/member/doRegister">
+                <form:form commandName="memberVo" id="registerForm" >
                     <div class="mb-4">
                         <div class="row">
                             <div class="col-md-6 form-group">
@@ -59,7 +103,7 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Confirm PassWord</label>
-                                <input class="form-control" type="password" placeholder="confirm PassWord">
+                                <input class="form-control" type="password" id="pwConfirm" placeholder="confirm PassWord">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>E-mail</label>
@@ -80,7 +124,7 @@
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
-                        <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3" id="registBtn">Place Order</button>
+                        <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3" id="registBtn">가입</button>
                     </div>
                 </form:form>
             </div>
