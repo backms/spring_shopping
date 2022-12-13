@@ -35,7 +35,7 @@ $(document).ready(function(){
             return false;
         }
 
-        if($('#mobileNo').val() == null || $('#mobilNo').val() == ''){
+        if($('#phoneNo').val() == null || $('#phoneNo').val() == ''){
             alert('핸드폰번호를 입력해주세요');
             return false;
         }
@@ -49,7 +49,7 @@ $(document).ready(function(){
         }
 
         // $('#registerForm').submit();
-        // $('#registerForm').attr("action", "/member/doRegister").submit();
+        $('#registerForm').attr("action", "/member/doRegister").submit();
     });
 
 });
